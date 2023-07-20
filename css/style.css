@@ -1,0 +1,28 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+
+/* Utility */
+
+
+.d-flex{
+  display: flex;
+}
+
+.f-wrap{
+  flex-wrap: wrap;
+}
+
+.debug{
+background-color: darkgray;
+border: 1px solid white
+}
+
+.container{
+  margin: 0px auto;
+  max-width: 1200px;
+  min-width: 400px;
+}
