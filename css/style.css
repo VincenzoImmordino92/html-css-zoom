@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family:Arial, Helvetica, sans-serif;
+}
 
 /* Utility */
 
@@ -36,38 +39,44 @@ header .top{
 }
 
 main{
-  overflow:hidden;
+  overflow:auto;
 }
 
 main .main-central{
-  width: 100vw;
-  height: calc(100vh - 160px);
+  width: 100%;
+  max-width: 1920px;
+  height: calc(100% - 160px);
   background-color: black;
 }
 
 .main-central .box{
-height: 100%;
-width: 100%;
-flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .photo{
   height: 200px;
-  width: 200px;
+  width: 400px;
   margin: 5px 10px;
+  position: relative;
 }
  
 .photo img{
   height: 200px;
-  width: 200px;
+  width: 400px;
+  object-fit: cover;
 }
 
-
-
-
-
-
-
+.photo span{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .4);
+  color: white;
+  padding: 10px;
+}
 
 
  /* inizio footer */
@@ -75,44 +84,45 @@ flex-wrap: wrap;
 footer .foot{
   width: 100vw;
   height: 80px;
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(65, 62, 62);
 }
 
 .foot .box-icons{
   height: 100%;
   width: 100%;
-  background-color: brown;
+  background-color: rgb(27, 26, 26);
   justify-content:space-evenly;
   align-items: center;
+  color: white;
 }
 
 /* barra di sinistra */
 
 .box-icons .bar-left{
-  width: 10%;
+  width: 20%;
+  height: 100%;
+  align-items: center;
 }
 
-.bar-left i{
-  position: relative;
-  font-size: 30px;
-  padding: 0px 15px;
-  color: white;
-}
-
-.bar-left i div{
-  position: absolute;
-font-size: 10px;
-margin-top: 5px;
-text-align: center;
-left: 50%;
-margin-top: 10px;
-transform: translate(-50%,-50%);
+.bar-left .col{
+flex-direction: column;
+align-items: center;
+padding: 0px 10px;
 
 }
 
-div i{
-  font-size:1rem;
+.col i{
+  font-size: 1rem;
 }
+
+.col span{
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8vw;
+ 
+}
+
 
 
 
@@ -121,17 +131,40 @@ div i{
 .box-icons .bar-right{
     width: 10%;
     height: 100%;
-    background-color: gray;
+    background-color: rgb(97, 97, 97);
     justify-content: center;
     align-items: center;
 }
 
 .box-icons .bar-right span{
   color: red;
+  font-weight: bold;
   display: inline-block;
 }
 
+/* barra centrale */
+
 .box-icons .bar-center{
-  width: 80%;
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.bar-center .col{
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+}
+
+
+.bar-center i{
+  font-size: 1.5rem;
+  padding: 0px 10px;
+}
+
+ 
+.bar-center i:nth-last-of-type(5){
+  font-size: 1rem;
 }
