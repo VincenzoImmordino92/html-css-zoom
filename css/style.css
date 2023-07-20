@@ -26,3 +26,115 @@ border: 1px solid white
   max-width: 1200px;
   min-width: 400px;
 }
+
+/* inizio header */
+
+header .top{
+  width: 100vw;
+  height: 80px;
+  background-color: black;
+}
+
+main{
+  overflow:hidden;
+}
+
+main .main-central{
+  width: 100vw;
+  height: calc(100vh - 160px);
+  background-color: black;
+}
+
+.main-central .box{
+height: 100%;
+width: 100%;
+flex-wrap: wrap;
+}
+
+.photo{
+  height: 200px;
+  width: 200px;
+  min-width: 100px;
+  margin: 5px 10px;
+}
+ 
+.photo img{
+  height: 200px;
+  width: 200px;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+ /* inizio footer */
+
+footer .foot{
+  width: 100vw;
+  height: 80px;
+  background-color: rgb(70, 70, 70);
+}
+
+.foot .box-icons{
+  height: 100%;
+  width: 100%;
+  background-color: brown;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+/* barra di sinistra */
+
+.box-icons .bar-left{
+  width: 10%;
+}
+
+.bar-left i{
+  position: relative;
+  font-size: 30px;
+  padding: 0px 15px;
+  color: white;
+}
+
+.bar-left i div{
+  position: absolute;
+font-size: 10px;
+margin-top: 5px;
+text-align: center;
+left: 50%;
+margin-top: 10px;
+transform: translate(-50%,-50%);
+
+}
+
+div i{
+  font-size:1rem;
+}
+
+
+
+/* barra di destra */
+
+.box-icons .bar-right{
+    width: 10%;
+    height: 100%;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-icons .bar-right span{
+  color: red;
+  display: inline-block;
+}
+
+.box-icons .bar-center{
+  width: 80%;
+  text-align: center;
+}
